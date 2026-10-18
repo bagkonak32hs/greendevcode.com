@@ -65,15 +65,23 @@
             text-align: center;
         }
 
+        @keyframes nameShimmer {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .hero h1 {
             font-size: 4.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #38bdf8 25%, #6366f1 50%, #a78bfa 75%, #ffffff 100%);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1.2;
+            animation: nameShimmer 5s ease infinite;
         }
 
         .hero .subtitle {
@@ -1282,6 +1290,14 @@ iframe {
 }
 .light-mode .hero p { color: #475569 !important; }
 .light-mode .hero .subtitle { color: #334155 !important; }
+.light-mode .hero h1 {
+    background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 25%, #6366f1 55%, #7c3aed 80%, #0284c7 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: nameShimmer 5s ease infinite;
+}
 
 /* Tech icons */
 .light-mode .tech-icon {
