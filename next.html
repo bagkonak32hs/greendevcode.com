@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+    <!-- Font Awesome için (head içinde olmalı) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="floating-controls">
+        <button class="lang-btn" id="langToggle" aria-label="Dil değiştir">TR</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Tema değiştir">
+            <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+    </div>
+
+    <nav>
+  <div class="container">
+    <div class="logo">
+      <img src="images/logoo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span id="hamburgerIcon">☰</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home" data-i18n="nav-home">Home</a></li>
+      <li><a href="index.html#about" data-i18n="nav-about">About</a></li>
+      <li><a href="index.html#services" data-i18n="nav-services">Services</a></li>
+      <li><a href="index.html#projects" data-i18n="nav-projects">Projects</a></li>
+      <li><a href="next.html" data-i18n="nav-next">Next Projects</a></li>
+      <li><a href="index.html#testimonials" data-i18n="nav-reviews">Reviews</a></li>
+      <li><a href="index.html#experience" data-i18n="nav-experience">Experience</a></li>
+      <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+    <section id="projects"><br>    
+
+
+
+        <h2 class="section-title">Upcoming Projects</h2>
+        <p class="section-subtitle">Here are Some projects that will start soon</p>
+
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🚀<img src="images/E-COMMERCE1.png" alt="E-Commerce Platform" /></div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">📱<img src="images/modern task manageme.png" alt="E-Commerce Platform" /></div>
+                <div class="project-content">
+                    <h3>Task Management App</h3>
+                    <p>Collaborative task management application with real-time updates, team collaboration features, and intelligent scheduling.</p>
+                    <div class="project-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">React Native</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🤖<img src="images/AI Chat Assistant in.png"/></div>
+                <div class="project-content">
+                    <h3>AI Chat Assistant</h3>
+                    <p>Intelligent chatbot powered by machine learning for customer support automation with natural language processing capabilities.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="project-card">
+                <div class="project-image">📊<img src="images/analytics das.png"/></div>
+                <div class="project-content">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time analytics dashboard for business intelligence with interactive data visualizations and custom reporting.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎮<img src="images/gaming platform inte.png"/></div>
+                <div class="project-content">
+                    <h3>Gaming Platform</h3>
+                    <p>Multiplayer gaming platform with real-time gameplay, leaderboards, achievements, and social features.</p>
+                    <div class="project-tags">
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🏥<img src="images/health.png"/></div>
+                <div class="project-content">
+                    <h3>Healthcare Portal</h3>
+                    <p>HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+            <div class="projects-grid">
+        <div class="project-card video-trigger">
+            <div class="project-image">
+                <video class="project-video" src="videos/Veralex 7.3...mp4" autoplay></video>
+            </div>
+            <div class="project-content">
+                <h3>Legal Law Attorney Desktop Program</h3>
+                <p>A convenient legal program that tracks all file processes for law offices and paralegals.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Stripe</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Demo →</a>
+                    <a href="#" class="project-link">GitHub X →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-close">&times;</span>
+            <video id="modalVideo" controls autoplay></video>
+        </div>
+    </div>
+
+    
+   <footer>
+        <div class="footer-content">
+    <div class="footer-text">
+      <p style="color: var(--gray);">&copy; 2025 Green Dev Code. All rights reserved.</p>
+      <p style="color: var(--white); font-size: 0.9rem; margin-top: 0.3rem;">
+          Built with passion and lots of coffee ☕
+      </p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/green_dev_code/" target="_blank" class="social-btn instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61582042626539" target="_blank" class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/selcukyesiltas32" target="_blank" class="social-btn linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/bagkonak32hs" target="_blank" class="social-btn github">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+    </footer>
+
+
+    <script>
+// ── Custom Cursor ──
+(function () {
+    const cursor = document.getElementById('cursor');
+    const dot = document.getElementById('cursorDot');
+    if (!cursor || !dot) return;
+    let mx = 0, my = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    });
+    (function anim() {
+        cx += (mx - cx) * 0.12; cy += (my - cy) * 0.12;
+        cursor.style.left = cx + 'px'; cursor.style.top = cy + 'px';
+        requestAnimationFrame(anim);
+    })();
+    document.querySelectorAll('a,button,.project-card,.social-btn').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
+    });
+})();
+
+// ── Dark / Light Mode ──
+(function () {
+    const btn = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    if (!btn) return;
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+        icon.className = 'fa-solid fa-moon';
+    }
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const light = document.body.classList.contains('light-mode');
+        icon.className = light ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        localStorage.setItem('theme', light ? 'light' : 'dark');
+    });
+})();
+
+// ── TR / EN Language Toggle ──
+(function () {
+    const btn = document.getElementById('langToggle');
+    if (!btn) return;
+    const labels = {
+        en: { 'nav-home':'Home','nav-about':'About','nav-services':'Services','nav-projects':'Projects','nav-next':'Next Projects','nav-reviews':'Reviews','nav-experience':'Experience','nav-contact':'Contact' },
+        tr: { 'nav-home':'Ana Sayfa','nav-about':'Hakkımda','nav-services':'Hizmetler','nav-projects':'Projeler','nav-next':'Diğer Projeler','nav-reviews':'Referanslar','nav-experience':'Deneyim','nav-contact':'İletişim' }
+    };
+    function applyNavLang(l) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const k = el.dataset.i18n;
+            if (labels[l] && labels[l][k]) el.textContent = labels[l][k];
+        });
+        btn.textContent = l === 'en' ? 'TR' : 'EN';
+    }
+    let lang = localStorage.getItem('lang') || 'en';
+    applyNavLang(lang);
+    btn.addEventListener('click', () => {
+        lang = lang === 'en' ? 'tr' : 'en';
+        localStorage.setItem('lang', lang);
+        applyNavLang(lang);
+    });
+})();
+
+// ── Scroll Progress ──
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const el = document.getElementById('scrollProgress');
+    if (el) el.style.width = scrolled + '%';
+});
+
+        document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    });
+  });
+});
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const hamburgerIcon = document.getElementById('hamburgerIcon');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburgerIcon.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+});
+
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove('active');
+    hamburgerIcon.textContent = '☰';
+  }
+});
+
+
+// Kart tıklanınca modal aç
+document.querySelectorAll('.video-trigger').forEach(card => {
+    card.addEventListener('click', () => {
+        const videoSrc = card.querySelector('.project-video').getAttribute('src');
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        modal.style.display = "flex";
+        modalVideo.src = videoSrc;
+        modalVideo.play();
+    });
+});
+
+// Kapatma butonu
+document.querySelector('.video-close').addEventListener('click', closeModal);
+
+// Dışarı tıklayınca kapat
+document.getElementById('videoModal').addEventListener('click', (e) => {
+    if (e.target.id === "videoModal") closeModal();
+});
+
+function closeModal() {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    modal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.src = "";
+};
+
+    </script>
+</body>
+</html>

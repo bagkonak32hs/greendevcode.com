@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Dev Code | Software Developer</title>
+    <meta name="description" content="Selçuk Yeşiltaş — Full Stack Software Developer. Web uygulamaları, e-ticaret ve kurumsal dijital çözümler geliştiriyorum.">
+    <meta name="keywords" content="web developer, full stack, html, css, javascript, react, c#, python, freelancer, istanbul">
+    <meta name="author" content="Selçuk Yeşiltaş">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Green Dev Code | Software Developer">
+    <meta property="og:description" content="Full Stack Software Developer — Web uygulamaları ve yenilikçi dijital çözümler.">
+    <meta property="og:image" content="https://www.greendevcode.com/images/logoo.png">
+    <meta property="og:url" content="https://www.greendevcode.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Green Dev Code | Software Developer">
+    <meta name="twitter:description" content="Full Stack Software Developer — Web uygulamaları ve yenilikçi dijital çözümler.">
+    <meta name="twitter:image" content="https://www.greendevcode.com/images/logoo.png">
+    <link rel="icon" type="image/png" href="/images/logoo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Selçuk Yeşiltaş",
+      "url": "https://www.greendevcode.com",
+      "email": "info@greendevcode.com",
+      "telephone": "+905368735681",
+      "jobTitle": "Full Stack Software Developer",
+      "description": "Full Stack Software Developer specializing in web applications, e-commerce solutions and mobile apps.",
+      "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
+      "sameAs": [
+        "https://www.instagram.com/green_dev_code/",
+        "https://www.linkedin.com/in/selcukyesiltas32",
+        "https://github.com/bagkonak32hs",
+        "https://www.facebook.com/profile.php?id=61582042626539"
+      ],
+      "knowsAbout": ["HTML","CSS","JavaScript","React","Next.js","C#",".NET","Python","SQL","Shopify","Android Development"]
+    }
+    </script>
+</head>
+<body>
+    
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Controls (sağ taraf - dil & tema) -->
+    <div class="floating-controls">
+        <button class="lang-btn" id="langToggle" aria-label="Dil değiştir">TR</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Tema değiştir">
+            <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+    </div>
+
+  <nav>
+  <div class="container">
+    <div class="logo">
+      <img src="images/logoo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span id="hamburgerIcon">☰</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-i18n="nav-home">Home</a></li>
+      <li><a href="#about" data-i18n="nav-about">About</a></li>
+      <li><a href="#services" data-i18n="nav-services">Services</a></li>
+      <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+      <li><a href="next.html" data-i18n="nav-next">Next Projects</a></li>
+      <li><a href="#testimonials" data-i18n="nav-reviews">Reviews</a></li>
+      <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+      <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content fade-in"><br>
+            <h1>Selçuk Yeşiltaş</h1>
+            <div class="avail-badge">
+                <span class="avail-dot"></span>
+                <span data-i18n="avail">Available for freelance work</span>
+            </div>
+            <p class="subtitle" data-i18n="hero-sub">Full Stack Software Developer</p>
+            <p data-i18n="hero-p">We develop scalable web applications and innovative solutions that make a difference. We are passionate about clean code, user experience, and the latest technologies. We are constantly learning and improving.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary" data-i18n="btn-work">View My Work</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="btn-touch">Get In Touch</a>
+            </div>
+            <!-- Teknoloji ikonları -->
+            <div class="tech-stack">
+             <div class="tech-icon" title="C#"><i class="fa-solid fa-code"></i><span>C#</span></div>
+             <div class="tech-icon" title="CSS"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+             <div class="tech-icon" title="HTML"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+             <div class="tech-icon" title="JavaScript"><i class="fa-brands fa-js"></i><span>JS</span></div>
+             <div class="tech-icon" title="React"><i class="fa-brands fa-react"></i><span>React</span></div>
+             <div class="tech-icon tech-icon--nextjs" title="Next.js">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+                 <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747C23.422 4.8 20.214.993 15.865.595c-.312-.028-3.04-.054-4.293-.054zm4.024 7.332c.148 0 .172.006.232.056a.359.359 0 0 1 .162.19l.044.103v4.668c0 4.286-.007 4.677-.044 4.726-.026.032-.098.098-.162.145l-.116.083h-.456l-.113-.073a.382.382 0 0 1-.147-.177l-.05-.1-.004-1.927-.006-1.93-1.317 1.964c-.724 1.08-1.328 1.975-1.342 1.988-.016.015-.137-.16-1.375-2.004-.777-1.167-1.405-2.105-1.399-2.097-.019.018-.023 1.15-.019 2.453l.007 2.433.05.1c.026.055.072.12.101.147a.45.45 0 0 0 .169.099c.065.015.126.02.451.02h.38l.095.059a.388.388 0 0 1 .158.182c.035.074.04.134.04.673v.59l-.074.082a.42.42 0 0 1-.198.13c-.062.012-.306.017-.632.012l-.555-.007-.12-.054a.49.49 0 0 1-.207-.205l-.055-.104V7.575l.055-.104a.49.49 0 0 1 .207-.205l.12-.054.572-.007c.315-.005.572 0 .572.01 0 .009.006.026.014.038.007.013.606.917 1.331 2.009l1.32 1.987.647-.967.648-.967V7.576l.04-.078a.443.443 0 0 1 .32-.225c.047-.007.236-.01.419-.01h.317l.097.069z"/>
+               </svg>
+               <span>Next.js</span>
+             </div>
+             <div class="tech-icon" title="Python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+             <div class="tech-icon" title="SQL"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title" data-i18n="srv-title">Services</h2>
+        <p class="section-subtitle" data-i18n="srv-sub">What I can build for you</p>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3 data-i18n="srv1-title">Web Development</h3>
+                <p data-i18n="srv1-desc">Corporate and personal websites with modern design, mobile-friendly layouts and fast loading times.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                    <li><i class="fa-solid fa-check"></i> SEO Friendly</li>
+                    <li><i class="fa-solid fa-check"></i> Fast &amp; Secure</li>
+                </ul>
+                <a href="#contact" class="service-btn" data-i18n="srv-cta">Get a Quote →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <h3 data-i18n="srv2-title">E-Commerce</h3>
+                <p data-i18n="srv2-desc">Full-featured online stores with product management, payment integration and sales analytics.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Payment Integration</li>
+                    <li><i class="fa-solid fa-check"></i> Inventory Management</li>
+                    <li><i class="fa-solid fa-check"></i> Analytics Dashboard</li>
+                </ul>
+                <a href="#contact" class="service-btn" data-i18n="srv-cta">Get a Quote →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-brands fa-shopify"></i></div>
+                <h3 data-i18n="srv3-title">Shopify Store</h3>
+                <p data-i18n="srv3-desc">Custom Shopify themes and storefronts optimised for conversion, mobile UX and brand identity.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Custom Theme</li>
+                    <li><i class="fa-solid fa-check"></i> App Integration</li>
+                    <li><i class="fa-solid fa-check"></i> Conversion Optimised</li>
+                </ul>
+                <a href="#contact" class="service-btn" data-i18n="srv-cta">Get a Quote →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h3 data-i18n="srv4-title">Mobile App</h3>
+                <p data-i18n="srv4-desc">Android mobile applications built with Java/Kotlin, published and maintained on Google Play Store.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Android Native</li>
+                    <li><i class="fa-solid fa-check"></i> Google Play</li>
+                    <li><i class="fa-solid fa-check"></i> Ongoing Support</li>
+                </ul>
+                <a href="#contact" class="service-btn" data-i18n="srv-cta">Get a Quote →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-desktop"></i></div>
+                <h3 data-i18n="srv5-title">Desktop Application</h3>
+                <p data-i18n="srv5-desc">Windows desktop applications built with C# and .NET. Internal tools, automation software and business management systems.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> C# / .NET</li>
+                    <li><i class="fa-solid fa-check"></i> Windows Native</li>
+                    <li><i class="fa-solid fa-check"></i> Database Integration</li>
+                </ul>
+                <a href="#contact" class="service-btn" data-i18n="srv-cta">Get a Quote →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-i18n="about-title">About Me</h2>
+        <img src="images/selfie1.png" alt="Selçuk Yeşiltaş" class="profile-pic">
+        <p class="section-subtitle" data-i18n="about-sub">Passionate developer with over 1 year of experience in developing digital solutions</p>
+        <div class="about-content">
+            <div class="about-text">
+                <h3 data-i18n="about-h3">Hi, I'm Selçuk</h3>
+                <p data-i18n="about-p1">I'm a full-stack software developer specializing in building exceptional digital experiences. With a strong foundation in both frontend and backend technologies, I create robust, scalable applications that solve real-world problems.</p>
+                <p data-i18n="about-p2">My journey in software development started with a curiosity about how things work, and has evolved into a passion for creating elegant solutions to complex challenges. I believe in writing clean, maintainable code and staying current with industry best practices.</p>
+                <p data-i18n="about-p3">When I'm not coding, you'll find me contributing to open-source projects, writing technical articles, or exploring new technologies.</p>
+                <p data-i18n="about-p4">In software development, it is very important to stay up to date, follow the latest technologies, learn new languages, and work continuously. I am constantly striving to improve myself in this regard.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Frontend Development</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h4>Backend Development</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h4>Database Design</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 45%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h4>UI/UX Design</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h4>Agile/Scrum</h4>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-i18n="proj-title">Projects</h2>
+        <p class="section-subtitle" data-i18n="proj-sub">Here are some completed projects</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image"><img src="images/2.png" alt="Paralegal Platform" /></div>
+                <div class="project-content">
+                    <h3>Paralegal Platform</h3>
+                    <p>A full-featured legal support platform with real-time case tracking, automated document drafting, contract analysis, and secure client communication dashboard.</p>
+                    <div class="project-tags">
+                        <span class="tag">Html</span>
+                        <span class="tag">Css</span>
+                        <span class="tag">js</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.paralegaldanismanlik.com/" class="project-link" target="_blank" rel="noopener noreferrer">View  →</a>
+                        <a href="https://github.com/bagkonak32hs/Paralegal-danismanlik" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/pilis otomotiv.png" alt="Vehicle repair, body paint platform" /></div>
+                <div class="project-content">
+                    <h3>Vehicle repair, body paint platform</h3>
+                    <p>A comprehensive auto repair company platform that provides mechanical repair, body correction and painting services for large, medium and small segment vehicles.</p>
+                    <div class="project-tags">
+                        <span class="tag">Html</span>
+                        <span class="tag">Css</span>
+                        <span class="tag">Js</span>
+                        <span class="tag">vs code</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://www.pilisotomotiv.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs/auto-repair-site" class="project-link" target="_blank"  rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image"><img src="images/koclar.png" alt="moving company" /></div>
+                <div class="project-content">
+                    <h3>Moving Company
+</h3>
+                    <p>A modern moving company website with online booking, real-time tracking, and customer support features.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Css</span>
+                        <span class="tag">Js</span>
+                        <span class="tag">vs code</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://www.koclarnakliyat.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs/auto-repair-site" class="project-link" target="_blank"  rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/memet kutlu.png" alt="Legal Law Platform" /></div>
+                <div class="project-content">
+                    <h3>Legal Law Platform</h3>
+                    <p>A full-featured legal law platform with case management, document handling, and client communication tools.</p>
+                    <div class="project-tags">
+                        <span class="tag">Html</span>
+                        <span class="tag">Css</span>
+                        <span class="tag">js</span>
+                        <span class="tag">Legal</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.avmemetkutlu.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank"  rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image"><img src="images/ay1.png" alt="Roofing Service" /></div>
+                <div class="project-content">
+                    <h3>Roofing Services and Products</h3>
+                    <p>Roof repair, maintenance, and restoration services, and sales of roofing products.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">Service</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ayplastcati.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank"  rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image"><img src="images/af1.png" alt="Beauty services" /></div>
+                <div class="project-content">
+                    <h3>Beauty Services</h3>
+                    <p>Professional beauty treatments and skincare services.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">Service</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.efsanebeauty.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank"  rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/charis 1.png" alt="Charis Jewels E-Commerce" /></div>
+                <div class="project-content">
+                    <h3>Charis Jewels — E-Commerce</h3>
+                    <p>Premium jewelry e-commerce platform built with React and Tailwind CSS. Features product showcase, real-time inventory, secure payment integration and an elegant mobile-first design.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">E-Commerce</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.charisjewels.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/fluxia2.png" alt="Mobile Game - Google Play" /></div>
+                <div class="project-content">
+                    <h3>Mobile Game — Google Play</h3>
+                    <p>Android mobile game developed with Java and published on Google Play. Features custom game mechanics, smooth animations and progression systems.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Gradle</span>
+                        <span class="tag">Android</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/apps/testing/com.selcu.game" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/sekoya pet.png" alt="Sekoya Pet E-Commerce" /></div>
+                <div class="project-content">
+                    <h3>Sekoya Pet — E-Commerce</h3>
+                    <p>Pet products e-commerce platform built with React and Tailwind CSS. Includes product catalog, filtering, cart management and a mobile-friendly checkout flow.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">E-Commerce</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.sekoya.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/myregalpaws.jpg" alt="My Regal Paws Shopify Store" /></div>
+                <div class="project-content">
+                    <h3>My Regal Paws — Shopify</h3>
+                    <p>Custom Shopify storefront for a premium pet accessories brand. Includes custom theme development, product page optimization and conversion-focused UI design.</p>
+                    <div class="project-tags">
+                        <span class="tag">Shopify</span>
+                        <span class="tag">Liquid</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://myregalpaws.myshopify.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs/Marketplace-web" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/anatolian.jpg" alt="Products of Anatolian" /></div>
+                <div class="project-content">
+                    <h3>Products of Anatolian</h3>
+                    <p>E-commerce website showcasing authentic Anatolian handcraft and natural products. Custom Shopify theme with cultural design elements and multi-language support.</p>
+                    <div class="project-tags">
+                        <span class="tag">Shopify</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://productsofanatolian.com/" class="project-link" target="_blank" rel="noopener noreferrer">View →</a>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img src="images/spor sitesi.png" alt="Sport News Platform" /></div>
+                <div class="project-content">
+                    <h3>Sport News Platform</h3>
+                    <p>A sports news portal with categorized news feeds, match results and live score updates. Built with a clean, fast-loading design optimized for mobile readers.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">Corporate</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link" style="opacity:0.5;cursor:default;">Coming Soon</span>
+                        <a href="https://github.com/bagkonak32hs" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- İLERİDE EKLENECEKLER
+            <div class="project-card">
+                <div class="project-image">🎮</div>
+                <div class="project-content">
+                    <h3>Gaming Platform</h3>
+                    <p>Multiplayer gaming platform with real-time gameplay, leaderboards, achievements, and social features.</p>
+                    <div class="project-tags">
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🏥</div>
+                <div class="project-content">
+                    <h3>Healthcare Portal</h3>
+                    <p>HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+            
+            -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title" data-i18n="rev-title">Client Reviews</h2>
+        <p class="section-subtitle" data-i18n="rev-sub">What clients say about working with me</p>
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="rev1-text">"Selçuk delivered our law firm website exactly as we envisioned. Professional, fast, and responsive — the site looks great on every device. Highly recommend."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar--logo"><img src="images/mk-logo.png" alt="Memet Kutlu"></div>
+                    <div>
+                        <h4>Av. Memet Kutlu</h4>
+                        <span>avmemetkutlu.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="rev2-text">"Our automotive service website was built quickly and professionally. Customers find us easily online now. The design is clean and the contact form works perfectly."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar--logo"><img src="images/po-logo.png" alt="Pilis Otomotiv"></div>
+                    <div>
+                        <h4>Pilis Otomotiv</h4>
+                        <span>pilisotomotiv.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="rev3-text">"Selçuk's expertise in legal software development helped us streamline our operations significantly. The solution he delivered is both user-friendly and highly functional. We're extremely satisfied with the results."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar--logo"><img src="images/pd-logo.png" alt="Paralegal Danışmanlık"></div>
+                    <div>
+                        <h4>Paralegal Danışmanlık</h4>
+                        <span>paralegaldanismanlik.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="rev3-text">"They flawlessly handled the design and setup of our beauty center's website, including the forms and contact sections; additionally, they perfectly executed the Google Business listing and all other related tasks."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar--logo"><img src="images/efsane-beauty-studio-logo-1.png" alt="Efsane Beauty Studio"></div>
+                    <div>
+                        <h4>Efsane Beauty Studio</h4>
+                        <span>efsanebeauty.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text" data-i18n="rev3-text">"They flawlessly set up our moving company's website and Google Business listing; we were very pleased.The services were transparent and flawless."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar--logo"><img src="images/koclar-logo.png" alt="Koçlar Nakliyat"></div>
+                    <div>
+                        <h4>Koçlar Nakliyat</h4>
+                        <span>koclarnakliyat.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title" data-i18n="exp-title">Work Experience</h2>
+        <p class="section-subtitle" data-i18n="exp-sub">My professional journey in software development</p>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3 data-i18n="exp1-title">Freelance Full Stack Developer</h3>
+                <div class="company" data-i18n="exp1-company">Self-Employed</div>
+                <div class="date">2024 - Present</div>
+                <p data-i18n="exp1-desc">Developing corporate and commercial websites for clients across various industries including legal, automotive, e-commerce and real estate. Delivering end-to-end solutions from design to Cloudflare/Vercel deployment.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3 data-i18n="exp2-title">Android Developer</h3>
+                <div class="company" data-i18n="exp2-company">Independent</div>
+                <div class="date">2023 - 2024</div>
+                <p data-i18n="exp2-desc">Developed and published a mobile game on Google Play using Java and Android SDK. Handled game logic, UI animations, and store listing optimization independently.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3 data-i18n="exp3-title">Junior Developer</h3>
+                <div class="company" data-i18n="exp3-company">StartUp Labs / Freelancer</div>
+                <div class="date">Jun 2018 - Feb 2020</div>
+                <p data-i18n="exp3-desc">Built responsive web applications and RESTful APIs. Participated in agile development processes and contributed to code reviews. Gained extensive experience in modern JavaScript frameworks.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-i18n="cont-title">Get In Touch</h2>
+        <p class="section-subtitle" data-i18n="cont-sub">Let's discuss your next project or opportunity</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item" id="emailCopyItem" title="Kopyalamak için tıkla" style="cursor:pointer;">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4 data-i18n="lbl-email">Email</h4>
+                        <p style="color: var(--gray);">info@greendevcode.com <span class="copy-hint" data-i18n="copy-hint">click to copy</span></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h4 data-i18n="lbl-phone">Phone</h4>
+                        <p style="color: var(--gray);">+90 (536) 873 56 81</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4 data-i18n="lbl-location">Location</h4>
+                        <p style="color: var(--gray);">İstanbul, TR</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h4 data-i18n="lbl-avail">Availability</h4>
+                        <p style="color: var(--gray);" data-i18n="lbl-avail-text">Open to opportunities</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--FORM KUTUSU-->
+            <div class="proj-cta-wrap">
+                <div class="proj-cta-badge" data-i18n="cta-badge">Free Consultation</div>
+                <button class="btn proj-cta-btn" id="openProjModal" type="button" data-i18n="req-open">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Request a Project</span>
+                </button>
+                <p class="proj-cta-sub" data-i18n="cta-sub">Get a custom quote in 24 hours</p>
+            </div>
+
+            <div class="contact-form-col">
+                <div class="contact-form-header">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <h3 data-i18n="form-title">Send a Quick Message</h3>
+                    <p data-i18n="form-sub">I'll get back to you within 24 hours</p>
+                </div>
+                <form class="contact-form"
+                     action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="1b17333e-6cd0-481e-ad70-7e119bcd6d39">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>         
+                
+
+        </div>        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+    <div class="footer-text">
+      <p style="color: var(--gray);">&copy; 2025 Green Dev Code. All rights reserved.</p>
+      <p style="color: var(--white); font-size: 0.9rem; margin-top: 0.3rem;">
+          Built with passion and lots of coffee ☕
+      </p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/green_dev_code/" target="_blank" class="social-btn instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61582042626539" target="_blank" class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/selcukyesiltas32" target="_blank" class="social-btn linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/bagkonak32hs" target="_blank" class="social-btn github">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905368735681?text=Merhaba%2C%20web%20sitesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">WhatsApp ile yaz</span>
+    </a>
+
+    <!-- Floating Calculator Button -->
+    <button class="calc-float-btn" id="calcFloatBtn" title="Fiyat Hesaplayıcı" aria-label="Fiyat Hesaplayıcı">
+        <i class="fa-solid fa-calculator"></i>
+    </button>
+
+    <!-- Calculator Modal -->
+    <div class="calc-modal-overlay" id="calcModal">
+        <div class="calc-modal-box">
+            <div class="calc-modal-header">
+                <h3 data-i18n="calc-title">Price Calculator</h3>
+                <button class="calc-modal-close" id="calcModalClose" type="button">✕</button>
+            </div>
+            <p class="calc-modal-sub" data-i18n="calc-sub">Get an instant estimate for your project</p>
+
+            <div class="calc-modal-section">
+                <div class="calc-group-title" data-i18n="calc-type">Project Type</div>
+                <div class="calc-types">
+                    <label class="calc-type-btn"><input type="radio" name="proj-type" value="web" checked><span>🌐 <span data-i18n="srv1-title">Web Dev</span></span></label>
+                    <label class="calc-type-btn"><input type="radio" name="proj-type" value="ecommerce"><span>🛒 <span data-i18n="srv2-title">E-Commerce</span></span></label>
+                    <label class="calc-type-btn"><input type="radio" name="proj-type" value="shopify"><span>🏪 <span data-i18n="srv3-title">Shopify</span></span></label>
+                    <label class="calc-type-btn"><input type="radio" name="proj-type" value="mobile"><span>📱 <span data-i18n="srv4-title">Mobile</span></span></label>
+                    <label class="calc-type-btn"><input type="radio" name="proj-type" value="desktop"><span>🖥️ <span data-i18n="srv5-title">Desktop</span></span></label>
+                </div>
+            </div>
+
+            <div class="calc-modal-section">
+                <div class="calc-group-title" data-i18n="calc-extras">Extra Features</div>
+                <div class="calc-extras">
+                    <label class="calc-extra-item"><input type="checkbox" class="calc-extra" value="3000"><span data-i18n="ext-seo">SEO Optimization</span></label>
+                    <label class="calc-extra-item"><input type="checkbox" class="calc-extra" value="5000"><span data-i18n="ext-admin">Admin Panel</span></label>
+                    <label class="calc-extra-item"><input type="checkbox" class="calc-extra" value="4000"><span data-i18n="ext-payment">Payment Integration</span></label>
+                    <label class="calc-extra-item"><input type="checkbox" class="calc-extra" value="3000"><span data-i18n="ext-multilang">Multi-language Support</span></label>
+                    <label class="calc-extra-item"><input type="checkbox" class="calc-extra" value="6000"><span data-i18n="ext-maintenance">6-Month Maintenance</span></label>
+                </div>
+            </div>
+
+            <div class="calc-result-box">
+                <div class="calc-result-label" data-i18n="calc-estimate">Estimated Price</div>
+                <div class="calc-price" id="calcPrice">₺8.000 – ₺15.000</div>
+                <div class="calc-note" data-i18n="calc-note">* Final price depends on project scope</div>
+            </div>
+            <a href="#contact" class="btn btn-primary" style="width:100%;text-align:center;margin-top:1rem;" data-i18n="calc-cta" onclick="document.getElementById('calcModal').classList.remove('open')">Get Exact Quote →</a>
+        </div>
+    </div>
+
+    <!-- Toast Bildirimi -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Proje Talep Modalı -->
+    <div class="proj-modal-overlay" id="projModal">
+        <div class="proj-modal">
+            <button class="proj-modal-close" id="projModalClose" type="button">✕</button>
+            <h2 data-i18n="req-title">Request a Project</h2>
+            <p class="section-subtitle" style="margin-bottom:1.5rem;" data-i18n="req-sub">Tell me about your project</p>
+            <form class="proj-req-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1b17333e-6cd0-481e-ad70-7e119bcd6d39">
+                <input type="hidden" name="subject" value="Yeni Proje Talebi — greendevcode.com">
+                <div class="req-type-group">
+                    <label class="req-type-label" data-i18n="calc-type">Project Type</label>
+                    <div class="req-types">
+                        <label class="req-type-chip"><input type="radio" name="project_type" value="Web Sitesi" checked><span>🌐 Web</span></label>
+                        <label class="req-type-chip"><input type="radio" name="project_type" value="E-Ticaret"><span>🛒 E-Commerce</span></label>
+                        <label class="req-type-chip"><input type="radio" name="project_type" value="Shopify"><span>🏪 Shopify</span></label>
+                        <label class="req-type-chip"><input type="radio" name="project_type" value="Mobil Uygulama"><span>📱 Mobile</span></label>
+                        <label class="req-type-chip"><input type="radio" name="project_type" value="Masaüstü Uygulama"><span>🖥️ Desktop</span></label>
+                    </div>
+                </div>
+                <div class="req-budget-group">
+                    <label class="req-type-label" data-i18n="req-budget">Budget Range</label>
+                    <input type="hidden" name="budget_range" id="budgetHidden" value="₺5.000 – ₺15.000">
+                    <input type="range" min="0" max="4" value="1" id="budgetSlider" step="1">
+                    <div class="budget-labels">
+                        <span>₺0–5K</span><span>₺5K–15K</span><span>₺15K–30K</span><span>₺30K–60K</span><span>₺60K+</span>
+                    </div>
+                    <div class="budget-display" id="budgetDisplay">₺5.000 – ₺15.000</div>
+                </div>
+                <input type="text" name="name" placeholder="Ad Soyad" required>
+                <input type="email" name="email" placeholder="E-posta" required>
+                <textarea name="message" placeholder="Projenizi kısaca anlatın..." rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary" data-i18n="req-send">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
